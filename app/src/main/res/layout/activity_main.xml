@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_weight="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="32dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Book Ganga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <EditText
+            android:id="@+id/gener"
+            android:hint="@string/gener"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:inputType="textAutoCorrect"
+            android:layout_height="40dp"/>
+
+        <EditText
+            android:id="@+id/max"
+            android:layout_marginTop="12dp"
+            android:hint="@string/number"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="40dp"/>
+
+        <Button
+            android:id="@+id/show"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:text="SHOW"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:layout_weight="7.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycler_view"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
